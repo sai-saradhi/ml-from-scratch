@@ -45,5 +45,3 @@ python scripts/download_datasets.py
 * Practice software engineering and OOP design
 * Build a reusable educational ML library
 
-```
-```
