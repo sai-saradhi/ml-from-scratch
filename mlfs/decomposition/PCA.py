@@ -2,14 +2,16 @@ import numpy as np
 
 class PCA:
 
-    def __init__(self, n_components):
+    def __init__(self, n_components = 2, random_state=42):
         self.n_components = n_components
         self.mean_ = None
         self.components_ = None
         self.eigenvalues_ = None
         self.explained_variance_ratio_ = None
+        self.random_state = random_state
         
     def fit(self, X):
+        np.random.seed(self.random_state)
         self.mean_ = np.mean(X, axis = 0)
         
         # mean centering
